@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.2'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'com.diffplug.spotless'
 }
 
 group = 'jack.algera.agregio'
@@ -17,7 +18,20 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation "org.mockito:mockito-junit-jupiter"
+}
+
+// Configures Spotless to follow Google Style Guidelines
+spotless {
+	java {
+		clearSteps()
+		eclipse().configFile('eclipse-java-phoenix-style.xml')
+		removeUnusedImports()
+	}
 }
 
 tasks.named('test') {
