@@ -21,7 +21,7 @@ The goal of this challenge is to create a simple application that exposes multip
 ## Solution
 We'll implement a simple REST API using Spring, making sure to follow the hexagonal architecture principles.
 
-![Screenshot 2024-02-04 at 11.30.38.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-02-04%20at%2011.30.38.png)
+<img width="1010" alt="Screenshot 2024-02-04 at 11 30 38" src="https://github.com/JackAlgera/agregio-interview/assets/26692718/39c5ae60-222d-44cd-9d8c-0b44770c2e23">
 
 ## Lint
 We'll use spotless to lint our code, following the google-java-format rules.
